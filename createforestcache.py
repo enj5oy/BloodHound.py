@@ -177,7 +177,7 @@ def main():
                           args.global_catalog)
             sys.exit(1)
         ad.override_gc(args.global_catalog)
-    # For adding timestamp prefix to the outputfiles 
+    # For adding timestamp prefix to the outputfiles
     timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S') + "_"
     bloodhound = BloodHound(ad)
     bloodhound.connect()

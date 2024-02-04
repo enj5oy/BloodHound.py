@@ -53,8 +53,8 @@ class ADDC(ADComputer):
         # Initialize GUID map
         self.objecttype_guid_map = dict()
 
-    def ldap_connect(self, protocol=None, resolver=False):
-    # def ldap_connect(self, protocol='ldaps', resolver=False):
+    #def ldap_connect(self, protocol=None, resolver=False):
+    def ldap_connect(self, protocol='ldaps', resolver=False):
         """
         Connect to the LDAP service
         """
@@ -560,7 +560,7 @@ class ADDC(ADComputer):
                               search_base=dn,
                               search_scope=LEVEL,
                               use_resolver=use_resolver)
-                              
+
         return entries
 
     def get_trusts(self):
